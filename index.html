@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Evolution of Imagination</title>
+<meta name="description" content="The acknowledgments of Oryan Zacks's PhD thesis, written in ink as you scroll.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#ecebe6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23ecebe6'/%3E%3Ccircle cx='32' cy='32' r='15' fill='%23151515'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zacks-nir.github.io/evolution-of-imagination/">
+<meta property="og:title" content="The Evolution of Imagination">
+<meta property="og:description" content="The acknowledgments of Oryan Zacks's PhD thesis, written in ink as you scroll.">
+<meta property="og:image" content="https://zacks-nir.github.io/evolution-of-imagination/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap">
+<style>
+  /* Idea: the thesis's acknowledgments page becomes a scroll of rice paper that the reader's own scrolling writes in ink; "imagine", the thesis's word, is the one word set in italic.
+     Layout: one reading column with a single left edge; the title and the close are set at display size, everything else at reading size. Single deliberate look (paper), not themed. */
+  :root {
+    --paper: #ecebe6;
+    --paper-step: #e1dfd8;
+    --paper-deep: #cfccc3;
+    --ink: #151515;
+    --ink-dense: #050505;
+    --ink-soft: #6b665d;
+    --serif: "EB Garamond", "Garamond", "Iowan Old Style", Georgia, serif;
+    --display: clamp(56px, 17vw, 128px);
+    --text: clamp(20px, 5.4vw, 36px);
+    --small: 16px;
+    --column: min(100%, calc(var(--text) * 19));
+    color-scheme: light;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background-color: var(--paper);
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='320' height='320'><filter id='f'><feTurbulence type='fractalNoise' baseFrequency='0.8 0.55' numOctaves='3' seed='7'/><feColorMatrix type='matrix' values='0 0 0 0 0.3  0 0 0 0 0.28  0 0 0 0 0.24  0 0 0 0.08 0'/></filter><rect width='100%' height='100%' filter='url(%23f)'/></svg>");
+    background-attachment: fixed;
+    color: var(--ink);
+    font-family: var(--serif);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #scroll {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 26vh;
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+    padding-block: 0 36vh;
+  }
+  .passage {
+    margin: 0; font-weight: 400;
+    width: var(--column);
+    font-size: var(--text);
+    line-height: 1.62;
+    text-align: left;
+    scroll-margin-top: 30vh;
+  }
+  .line { display: block; white-space: nowrap; }
+  /* reading passages: justified to both edges, the closing line left as written */
+  .passage.body { text-align: justify; text-align-last: left; word-spacing: .02em; }
+  .w { display: inline-block; will-change: opacity, filter; }
+
+  /* emphasis: names and characterful adjectives are set larger, imagination in italic */
+  .w.name      { font-size: 1.24em; font-weight: 500; color: var(--ink-dense); }
+  .w.adjective { font-size: 1.16em; color: var(--ink-dense); }
+  .w.motif     { font-size: 1.16em; font-style: italic; color: var(--ink-dense); }
+  .w.final     { font-size: 1.28em; font-weight: 600; color: var(--ink-dense); }
+
+  /* title page: the thesis title at display size, low on the first screen like a printed title page */
+  .passage.title, .passage.ack, .passage.end { font-size: var(--display); }
+  .passage.title {
+    min-height: 100svh; box-sizing: border-box;
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding-bottom: 16svh;
+  }
+  .title .line, .ack .line { line-height: .95; letter-spacing: -0.02em; font-weight: 400; color: var(--ink-dense); }
+  .end .line { line-height: .95; letter-spacing: -0.02em; font-weight: 600; color: var(--ink-dense); }
+  .title .byline, .title .hint { font-weight: 400; }
+  .title .byline { font-size: var(--text); letter-spacing: 0; line-height: 1.4; margin-top: .9em; color: var(--ink); }
+  .title .hint   { font-size: var(--small); letter-spacing: 0; line-height: 1.4; margin-top: 2.2em; color: var(--ink-soft); }
+  .end .sub      { font-size: var(--text); font-style: italic; letter-spacing: 0; line-height: 1.4; margin-top: .6em; color: var(--ink); }
+  .end { min-height: 70svh; display: flex; flex-direction: column; justify-content: center; }
+  #again {
+    align-self: flex-start; margin-top: 2.2em;
+    font: inherit; font-size: var(--small); color: var(--paper);
+    background: var(--ink); border: 0; border-radius: 0;
+    padding: 14px 20px; cursor: pointer;
+    transition: transform .2s ease, background-color .2s ease;
+  }
+  #again:hover { background: var(--ink-dense); transform: translateY(-2px); }
+  #again:active { transform: translateY(0); }
+
+  /* quick navigation: a plain bar one tone darker than the paper */
+  #bar {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 5;
+    display: flex; align-items: center; gap: 16px;
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+    padding-block: 10px calc(10px + env(safe-area-inset-bottom, 0px));
+    background: var(--paper-step);
+    font-size: var(--small); color: var(--ink);
+    transform: translateY(110%);
+    transition: transform .4s ease;
+  }
+  #bar.shown { transform: none; }
+  #count { font-variant-numeric: tabular-nums lining-nums; min-width: 4.4em; color: var(--ink-soft); }
+  #rail { flex: 1; min-width: 0; height: 28px; position: relative; cursor: pointer; }
+  #rail::before { content: ""; position: absolute; left: 0; right: 0; top: 11px; height: 6px; background: var(--paper-deep); }
+  #fill { position: absolute; left: 0; top: 11px; height: 6px; width: 0; background: var(--ink); }
+  #top {
+    font: inherit; font-size: var(--small); color: var(--ink);
+    background: none; border: 0; padding: 8px 2px; cursor: pointer; white-space: nowrap;
+    transition: transform .2s ease;
+  }
+  #top:hover { transform: translateY(-2px); }
+  #top:focus-visible, #rail:focus-visible, #again:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .w { opacity: 1 !important; filter: none !important; transform: none !important; }
+    #bar, #again, #top { transition: none; }
+  }
+</style>
+</head>
+<body>
+<main id="scroll" aria-label="Acknowledgments"></main>
+
+<nav id="bar" aria-label="Reading progress">
+  <span id="count" aria-live="off"></span>
+  <div id="rail" role="slider" tabindex="0" aria-label="Jump to a passage" aria-valuemin="1"><div id="fill"></div></div>
+  <button id="top" type="button">Back to start ↑</button>
+</nav>
+
+<script>
+(() => {
+  const DATA = {"slides": [{"lines": ["This thesis reflects", "the imaginative acts", "of several people, without which", "it could not have taken the form", "that it took.", "First and foremost,", "I would like to thank", "my advisor, Eva Jablonka.", "Finding her was a matter of luck", "more than any mental action,", "and I am so lucky I did."], "emphasis": [{"text": "imaginative", "kind": "motif"}, {"text": "Eva Jablonka", "kind": "name"}, {"text": "lucky", "kind": "adjective"}]}, {"lines": ["Eva is a rare specimen of", "exactly what one imagines", "an excellent academic to be:", "rigorous and kind,", "creative and thoughtful,", "bold and extremely knowledgeable.", "She was especially generous", "to me with her time,", "attention and ideas."], "emphasis": [{"text": "Eva", "kind": "name"}, {"text": "rare", "kind": "adjective"}, {"text": "imagines", "kind": "motif"}, {"text": "excellent", "kind": "adjective"}, {"text": "rigorous", "kind": "adjective"}, {"text": "kind", "kind": "adjective"}, {"text": "creative", "kind": "adjective"}, {"text": "thoughtful", "kind": "adjective"}, {"text": "bold", "kind": "adjective"}, {"text": "knowledgeable", "kind": "adjective"}, {"text": "generous", "kind": "adjective"}]}, {"lines": ["When I set out on this journey,", "I knew very little about my", "research targets and I had no idea", "what to expect of other", "researchers in the field."], "emphasis": []}, {"lines": ["I was delighted to discover", "a welcoming community of", "curious and open-minded", "researchers, who hold in their", "collective imagination", "a wealth of knowledge and", "an abundance of kindness.", "I have come to consider many", "of them friends and mentors,", "and I include here only", "a very partial list."], "emphasis": [{"text": "welcoming", "kind": "adjective"}, {"text": "curious", "kind": "adjective"}, {"text": "open-minded", "kind": "adjective"}, {"text": "collective imagination", "kind": "motif"}]}, {"lines": ["I thank Nicola Clayton", "for reviewing my original", "research proposal and providing", "thoughtful feedback at the outset", "of my journey."], "emphasis": [{"text": "Nicola Clayton", "kind": "name"}, {"text": "thoughtful", "kind": "adjective"}]}, {"lines": ["Many thanks to Simona Ginsburg,", "who collaborated with Eva and me", "on the first chapter", "of the thesis.", "Her work on the evolution", "of consciousness served as", "the basis for this thesis", "and she continued to support me", "throughout the full process."], "emphasis": [{"text": "Simona Ginsburg", "kind": "name"}, {"text": "Eva", "kind": "name"}]}, {"lines": ["My thanks to Marta Halina for", "inviting me as a student visitor", "to her group at the HPS department", "in Cambridge", "and to Jonathan Birch for", "extending a generous and", "open-ended invitation to", "participate in the activities", "of his group at the LSE."], "emphasis": [{"text": "Marta Halina", "kind": "name"}, {"text": "HPS", "kind": "name"}, {"text": "Cambridge", "kind": "name"}, {"text": "Jonathan Birch", "kind": "name"}, {"text": "generous", "kind": "adjective"}, {"text": "open-ended", "kind": "adjective"}, {"text": "LSE", "kind": "name"}]}, {"lines": ["I also thank Alexandria Boyle", "and Moshe Bar for reviewing", "the full thesis and providing", "thoughtful comments that will", "continue to serve me in my", "future endeavours.", "I would like to thank Liad Mudrik", "for her generous informal support", "over the past several years."], "emphasis": [{"text": "Alexandria Boyle", "kind": "name"}, {"text": "Moshe Bar", "kind": "name"}, {"text": "thoughtful", "kind": "adjective"}, {"text": "Liad Mudrik", "kind": "name"}, {"text": "generous", "kind": "adjective"}]}, {"lines": ["Special thanks go to", "Amos Morris-Reich.", "Although we collaborated on a", "project quite separate from the", "research presented here,", "the experience I gained was", "invaluable and it shaped", "the researcher I am today."], "emphasis": [{"text": "Amos Morris-Reich", "kind": "name"}, {"text": "invaluable", "kind": "adjective"}]}, {"lines": ["I am grateful to the KLI", "and its wonderful staff,", "who provided me with a physical", "and intellectual home for", "the last year of my PhD.", "During my time at the KLI", "I expanded my research horizons,", "my circle of friends", "and collaborators, and my family!", "I could not imagine", "a better place to do", "any of these things."], "emphasis": [{"text": "KLI", "kind": "name"}, {"text": "wonderful", "kind": "adjective"}, {"text": "KLI", "kind": "name"}, {"text": "imagine", "kind": "motif"}]}, {"lines": ["My deep gratitude goes to", "the Cohn Institute", "and its members,", "truly a hidden gem in", "the halls of Gilman.", "Joining the institute opened me", "up to a completely new world,", "strange and fascinating."], "emphasis": [{"text": "deep", "kind": "adjective"}, {"text": "Cohn Institute", "kind": "name"}, {"text": "hidden", "kind": "adjective"}, {"text": "Gilman", "kind": "name"}, {"text": "strange", "kind": "adjective"}, {"text": "fascinating", "kind": "adjective"}]}, {"lines": ["I discovered a new way of", "thinking about science and", "the types of questions one is", "“allowed” to engage in.", "Above all, I made", "life-long friends."], "emphasis": [{"text": "life-long", "kind": "adjective"}]}, {"lines": ["During the writing process", "of this thesis, I was blessed", "to become a mother of two", "beautiful children,", "Raviv and Yaara.", "Whether or not it is true", "that it takes a village", "to raise a child, it is surely", "true that raising a child", "and completing a PhD", "is impossible without a village."], "emphasis": [{"text": "beautiful", "kind": "adjective"}, {"text": "Raviv and Yaara", "kind": "name"}]}, {"lines": ["I would like to thank", "my personal tribe, which allowed", "me to imagine and bring forth", "a life that includes both", "raising a family", "and pursuing a demanding career,", "and, most importantly, continues", "to surround me and my family", "with so much love and support."], "emphasis": [{"text": "imagine", "kind": "motif"}, {"text": "demanding", "kind": "adjective"}]}, {"lines": ["Heading this tribe are", "my parents,", "Rona and Joseph Rosen,", "who have been supporting and", "encouraging my curiosity since", "before I could walk."], "emphasis": [{"text": "Rona and Joseph Rosen", "kind": "name"}]}, {"lines": ["Their imagination", "of what raising children", "amounts to included", "ballet classes, science museums,", "and mushroom hunts in the woods,", "as well as helping with", "math homework and illustrating", "history assignments."], "emphasis": [{"text": "imagination", "kind": "motif"}]}, {"lines": ["They always put my education", "at the top of their priorities,", "and the skills and capacities", "I brought with me when I", "entered academia can be", "attributed to their", "nurturing care.", "I am so happy that my", "children can now enjoy", "this devotion and support."], "emphasis": [{"text": "nurturing", "kind": "adjective"}]}, {"lines": ["I would also like to thank", "my mother and father-in-law,", "Dana and Yoav Zacks,", "who provided me and Raviv", "with a home in our most", "vulnerable hour,", "and who continue to give", "all of us a strong base", "from which to grow."], "emphasis": [{"text": "Dana and Yoav Zacks", "kind": "name"}, {"text": "Raviv", "kind": "name"}, {"text": "vulnerable", "kind": "adjective"}]}, {"lines": ["It is one of the great fortunes", "of my life that I was invited", "to join the Zacks tribe,", "and I could not imagine", "a better tribe to join."], "emphasis": [{"text": "Zacks", "kind": "name"}, {"text": "imagine", "kind": "motif"}]}, {"lines": ["Finally, I would like to", "thank my partner, Nir.", "Through his imagination,", "he brings forth the best life", "I could wish for myself.", "He does this every day,", "unfailingly, with actions", "small and large."], "emphasis": [{"text": "Nir", "kind": "name"}, {"text": "imagination", "kind": "motif"}, {"text": "small and large.", "kind": "final"}]}]};
+  const root = document.getElementById("scroll");
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function passage(cls, lines, label) {
+    const tag = { title: "h1", ack: "h2" }[cls] || "p";
+    const el = document.createElement(tag);
+    el.className = "passage " + cls;
+    if (label) el.setAttribute("aria-label", label);
+    const words = [];
+    // body passages flow as one justified paragraph; display passages keep their set lines
+    const flow = cls === "body";
+    lines.forEach((line, li) => {
+      const l = flow ? el : document.createElement("span");
+      if (!flow) l.className = "line " + (line.cls || "");
+      if (flow && li > 0) el.appendChild(document.createTextNode(" "));
+      const parts = line.text.split(" ");
+      let pos = 0;
+      parts.forEach((p, k) => {
+        const w = document.createElement("span");
+        w.className = "w";
+        w.textContent = p;
+        const from = line.text.indexOf(p, pos);
+        pos = from + p.length;
+        (line.marks || []).forEach(m => { if (from < m.end && pos > m.start) w.classList.add(m.kind); });
+        l.appendChild(w);
+        words.push(w);
+        if (k < parts.length - 1) l.appendChild(document.createTextNode(" "));
+      });
+      if (!flow) el.appendChild(l);
+    });
+    root.appendChild(el);
+    return { el, words, cls, key: "" };
+  }
+
+  const all = [];
+  all.push(passage("title", [
+    { text: "The Evolution" }, { text: "of Imagination" },
+    { text: "Oryan Zacks", cls: "byline" },
+    { text: "Scroll to read ↓", cls: "hint" },
+  ], "The Evolution of Imagination, Oryan Zacks"));
+  all.push(passage("ack", [{ text: "Acknowledgments" }]));
+  DATA.slides.forEach(s => {
+    all.push(passage("body", s.lines.map(text => {
+      const marks = [];
+      (s.emphasis || []).forEach(e => {
+        const k = text.indexOf(e.text);
+        if (k >= 0) marks.push({ start: k, end: k + e.text.length, kind: e.kind });
+      });
+      return { text, marks };
+    })));
+  });
+  all.push(passage("end", [{ text: "#PhDone" }, { text: "PhD Thesis approved!", cls: "sub" }]));
+  const again = document.createElement("button");
+  again.id = "again"; again.type = "button"; again.textContent = "Read it again ↑";
+  all[all.length - 1].el.appendChild(again);
+  const body = all.filter(p => p.cls === "body");
+
+  // shrink a passage evenly if its longest line would overflow the column
+  function fit() {
+    const page = root.clientWidth
+      - parseFloat(getComputedStyle(root).paddingLeft)
+      - parseFloat(getComputedStyle(root).paddingRight);
+    all.forEach(p => {
+      p.el.style.fontSize = "";
+      const avail = Math.min(page, p.el.clientWidth || page);
+      const widest = Math.max(...[...p.el.querySelectorAll(".line")].map(l => l.scrollWidth));
+      if (widest > avail) {
+        const base = parseFloat(getComputedStyle(p.el).fontSize);
+        p.el.style.fontSize = (base * avail / widest * 0.98).toFixed(2) + "px";
+      }
+    });
+  }
+
+  const clamp = x => Math.max(0, Math.min(1, x));
+  const ease = x => 1 - Math.pow(1 - x, 3);
+
+  // Scroll drives the ink. Writing: words appear in reading order while the passage's
+  // top rises from 88% to 45% of the screen. Dissolving: once its centre passes 30%.
+  function paint() {
+    raf = 0;
+    const vh = innerHeight;
+    let current = 0;
+    all.forEach((p, idx) => {
+      const r = p.el.getBoundingClientRect();
+      if (r.bottom < -vh * 0.3 || r.top > vh * 1.3) {
+        if (p.key !== "off") { p.words.forEach(w => { w.style.opacity = 0; }); p.key = "off"; }
+        return;
+      }
+      const isTitle = p.cls === "title", isEnd = p.cls === "end";
+      const write = isTitle ? 1 : clamp((vh * 0.9 - r.top) / (vh * 0.48));
+      const cy = r.top + r.height / 2;
+      const fade = isEnd ? 0 : clamp((vh * (isTitle ? 0.42 : 0.36) - cy) / (vh * 0.38));
+      const key = write.toFixed(3) + "|" + fade.toFixed(3);
+      if (key === p.key) return;
+      p.key = key;
+      const n = p.words.length;
+      p.words.forEach((w, i) => {
+        // each word takes a short window of the writing progress, in order
+        const start = n > 1 ? (i / (n - 1)) * 0.66 : 0;
+        const a = reduced ? 1 : ease(clamp((write - start) / 0.34));
+        // the ink lets go unevenly: each word has its own small delay
+        const lag = ((i * 0.6180339) % 1) * 0.3;
+        const out = reduced ? 0 : ease(clamp((fade - lag) / 0.7));
+        // written: a wet blot that draws in to a sharp mark
+        // dissolving: the ink spreads into the fibre, greys and blooms, leaving a faint stain
+        const op = a * (1 - out * 0.94);
+        const blur = (1 - a) * 9 + out * 7;
+        const wet = 0.38 * (1 - a) * Math.min(1, a * 3);
+        const bloom = 0.3 * Math.sin(out * Math.PI * 0.85);
+        const halo = (1 - a) * 14 + out * 22;
+        w.style.opacity = op.toFixed(3);
+        w.style.filter = blur > 0.05 ? `blur(${blur.toFixed(2)}px)` : "none";
+        w.style.textShadow = (wet + bloom) > 0.004 ? `0 0 ${halo.toFixed(1)}px rgba(5,5,5,${(wet + bloom).toFixed(3)})` : "";
+        w.style.transform = out > 0 ? `scale(${(1 + out * 0.05).toFixed(4)})` : "";
+      });
+      if (p.cls === "body" && cy < vh * 0.7) current = body.indexOf(p) + 1;
+    });
+    // progress bar
+    const max = document.documentElement.scrollHeight - vh;
+    const frac = max > 0 ? scrollY / max : 0;
+    fill.style.width = (frac * 100).toFixed(2) + "%";
+    count.textContent = current ? `${current} / ${body.length}` : "";
+    rail.setAttribute("aria-valuemax", body.length);
+    rail.setAttribute("aria-valuenow", current || 1);
+    // the bar steps aside while reading forward and returns on any move back, a pause, or the close
+    const dy = scrollY - lastY; lastY = scrollY;
+    clearTimeout(idle);
+    if (scrollY < vh * 0.5) bar.classList.remove("shown");
+    else if (dy < -2 || frac > 0.97) bar.classList.add("shown");
+    else if (dy > 2) bar.classList.remove("shown");
+    idle = setTimeout(() => { if (scrollY > vh * 0.5) bar.classList.add("shown"); }, 1400);
+  }
+  let raf = 0, lastY = scrollY, idle = 0;
+  const schedule = () => { if (!raf) raf = requestAnimationFrame(paint); };
+
+  const bar = document.getElementById("bar");
+  const fill = document.getElementById("fill");
+  const count = document.getElementById("count");
+  const rail = document.getElementById("rail");
+
+  function goTo(i) {
+    const p = body[Math.max(0, Math.min(body.length - 1, i))];
+    p.el.scrollIntoView({ behavior: reduced ? "auto" : "smooth", block: "center" });
+  }
+  const toStart = () => scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
+  document.getElementById("top").addEventListener("click", toStart);
+  again.addEventListener("click", toStart);
+  rail.addEventListener("click", e => {
+    const r = rail.getBoundingClientRect();
+    goTo(Math.round(((e.clientX - r.left) / r.width) * (body.length - 1)));
+  });
+  rail.addEventListener("keydown", e => {
+    const cur = Math.max(0, parseInt(count.textContent) - 1 || 0);
+    if (e.key === "ArrowRight" || e.key === "ArrowUp") { e.preventDefault(); goTo(cur + 1); }
+    if (e.key === "ArrowLeft" || e.key === "ArrowDown") { e.preventDefault(); goTo(cur - 1); }
+    if (e.key === "Home") { e.preventDefault(); scrollTo({ top: 0 }); }
+  });
+
+  addEventListener("scroll", schedule, { passive: true });
+  addEventListener("resize", () => { fit(); all.forEach(p => p.key = ""); schedule(); });
+  fit();
+  paint();
+  if (document.fonts) document.fonts.ready.then(() => { fit(); all.forEach(p => p.key = ""); paint(); });
+})();
+</script>
+</body>
+</html>
